@@ -9,10 +9,20 @@ GET     /                           controllers.HomeController.index()
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-# Cek koneksi database
-GET     /cek-db                      controllers.HomeController.cekKoneksiDb
-GET     /produk                      controllers.ProductController.list()
-POST    /produk                      controllers.ProductController.create()
-GET     /produk/:id                  controllers.ProductController.detail(id: Long)
-PUT     /produk/:id                  controllers.ProductController.update(id: Long)
-DELETE  /produk/:id                  controllers.ProductController.delete(id: Long)
+# Kategori
+POST    /kategori             controllers.KategoriController.create()
+GET     /kategori             controllers.KategoriController.list()
+GET     /kategori/:id         controllers.KategoriController.detail(id: Long)
+PUT     /kategori/:id         controllers.KategoriController.update(id: Long)
+DELETE  /kategori/:id         controllers.KategoriController.delete(id: Long)
+
+# Produk
+GET     /produk               controllers.ProductController.list()
+GET     /produk/:id           controllers.ProductController.detail(id: Long)
+POST    /produk               controllers.ProductController.create()
+PUT     /produk/:id           controllers.ProductController.update(id: Long)
+DELETE  /produk/:id           controllers.ProductController.delete(id: Long)
+
+# Lainnya
+GET     /                     controllers.HomeController.index
+GET     /cek-db               controllers.HomeController.cekKoneksiDb

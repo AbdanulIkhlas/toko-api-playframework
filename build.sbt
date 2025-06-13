@@ -20,7 +20,7 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.1
 libraryDependencies ++= Seq(
   jdbc,
   evolutions,
-  "org.postgresql" % "postgresql" % "42.7.3", // Driver spesifik untuk PostgreSQL
-  "org.playframework.anorm" %% "anorm" % "2.7.0", // Library Anorm untuk query SQL
+  "org.postgresql" % "postgresql" % "42.7.3",
+  "org.playframework.anorm" %% "anorm" % "2.7.0",
   guice
 )
